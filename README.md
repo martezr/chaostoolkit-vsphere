@@ -75,8 +75,8 @@ The VMware vSphere server and port must be configured to authenticate to the ins
 
 ### Credentials
 
-This extension uses the [pyvmomi][] library under the hood. This library expects
-that you have properly [configured][creds] your environment to connect and
+This extension uses the [pyvmomi][https://github.com/vmware/pyvmomi] library under the hood. This library expects
+that you have properly configured credentials for your environment to connect and
 authenticate with the vCenter server.
 
 #### Pass credentials explicitely
@@ -104,7 +104,7 @@ Then, use it as follows:
     "name": "stop-virtual-machine",
     "provider": {
        "type": "python",
-       "secrets": ["vsphere"]  
+       "secrets": ["vsphere"],
        "module": "chaosvsphere.vm.actions",
         "func": "stop_vm",
         "arguments": {
